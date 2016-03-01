@@ -1,0 +1,2 @@
+TrajMatBauRun.m : sets up build of trajectory matrix
+

@@ -1,0 +1,5145 @@
+Model {
+  Name			  "BattTest"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sat Jul 03 20:01:46 2004"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Mark"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Aug 29 14:58:12 2008"
+  ModelVersionFormat	  "1.%<AutoIncrement:38>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "1"
+  SolverMode		  "Auto"
+  Solver		  "ode5"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.01"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  on
+  RTWExpressionDepthLimit 5
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "BattTest"
+    Location		    [1, 108, 1013, 688]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [490, 330, 520, 360]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "ISEA_FFA Battery Model\nI > 0 = charging"
+      Ports		      [3, 4]
+      Position		      [585, 317, 700, 483]
+      BackgroundColor	      "orange"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"ISEA_FFA Battery Model\nI > 0 = charging"
+	Location		[233, 204, 879, 586]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "U_set"
+	  Position		  [240, 188, 270, 202]
+	  Port			  "1"
+	  LatchInput		  off
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    ShowPropagatedSignals   "on"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "USlope_set"
+	  Position		  [240, 248, 270, 262]
+	  Port			  "2"
+	  LatchInput		  off
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    ShowPropagatedSignals   "on"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "I_Input"
+	  Position		  [135, 108, 165, 122]
+	  Port			  "3"
+	  LatchInput		  off
+	  Interpolate		  on
+	  Port {
+	    PortNumber		    1
+	    PropagatedSignals	    "current"
+	    ShowPropagatedSignals   "on"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Batterie"
+	  Ports			  [3, 4]
+	  Position		  [340, 100, 460, 285]
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  Port {
+	    PortNumber		    3
+	    Name		    "BUS_U"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  System {
+	    Name		    "Batterie"
+	    Location		    [-23, 93, 989, 640]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "BUS_1_in1"
+	      Position		      [25, 148, 55, 162]
+	      ForegroundColor	      "red"
+	      Port		      "1"
+	      LatchInput	      off
+	      Interpolate	      on
+	      Port {
+		PortNumber		1
+		Name			"BUS_1"
+		PropagatedSignals	"BUS_1"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "U_set"
+	      Position		      [105, 18, 135, 32]
+	      Port		      "2"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "USlope_set"
+	      Position		      [105, 93, 135, 107]
+	      Port		      "3"
+	      LatchInput	      off
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      Ports		      [1, 2]
+	      Position		      [100, 128, 105, 177]
+	      ShowName		      off
+	      OutputSignals	      "current,SOC_beg"
+	      MuxedOutput	      off
+	      Port {
+		PortNumber		1
+		Name			"<current>"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<SOC_beg>"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [3, 1]
+	      Position		      [190, 128, 195, 202]
+	      ShowName		      off
+	      Inputs		      "3"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "R_ser"
+	      Ports		      [2, 1]
+	      Position		      [385, 241, 485, 294]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      Port {
+		PortNumber		1
+		Name			"U_R_ser"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	      System {
+		Name			"R_ser"
+		Location		[131, 126, 740, 642]
+		Open			on
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "SOC"
+		  Position		  [50, 68, 80, 82]
+		  ForegroundColor	  "red"
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "BUS_1_in"
+		  Position		  [45, 363, 75, 377]
+		  ForegroundColor	  "red"
+		  Port			  "2"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector"
+		  Ports			  [1, 1]
+		  Position		  [140, 301, 145, 439]
+		  ShowName		  off
+		  OutputSignals		  "current"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector1"
+		  Ports			  [1, 2]
+		  Position		  [140, 15, 145, 135]
+		  ShowName		  off
+		  OutputSignals		  "temp,SOC"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<temp>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<SOC>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Memory
+		  Name			  "Memory"
+		  Position		  [460, 340, 490, 370]
+		  X0			  "0"
+		  InheritSampleTime	  off
+		  RTWStateStorageClass	  "Auto"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [2, 1]
+		  Position		  [355, 326, 395, 384]
+		  Inputs		  "2"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  Ports			  [3, 1]
+		  Position		  [320, 119, 360, 171]
+		  Inputs		  "**/"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "R_ser_ini"
+		  Ports			  [2, 1]
+		  Position		  [235, 42, 290, 93]
+		  SourceBlock		  "simulink3/Functions\n& Tables/Look-"
+"Up\nTable (2-D)"
+		  SourceType		  "Lookup Table (2-D)"
+		  x			  "battery.temp_in"
+		  y			  "battery.SOC_in"
+		  t			  "battery.R_ser_ini"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "nominal capacity"
+		  Position		  [40, 223, 95, 257]
+		  Value			  "battery.nom_cap"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "nominal current"
+		  Position		  [160, 224, 200, 256]
+		  Gain			  "1/20"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "nominal voltage"
+		  Position		  [40, 158, 95, 192]
+		  Value			  "battery.nom_volt"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "number of\nbattery cells"
+		  Position		  [160, 159, 200, 191]
+		  Gain			  "0.5"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "U_R_ser"
+		  Position		  [535, 348, 565, 362]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "Memory"
+		  SrcPort		  1
+		  DstBlock		  "U_R_ser"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "nominal capacity"
+		  SrcPort		  1
+		  DstBlock		  "nominal current"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "nominal current"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, -80]
+		  DstBlock		  "Product1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 125; -55, 0; 0, 70]
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "number of\nbattery cells"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, -30]
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "nominal voltage"
+		  SrcPort		  1
+		  DstBlock		  "number of\nbattery cells"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "R_ser_ini"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, 60]
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<temp>"
+		  Labels		  [3, 0]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 10]
+		  DstBlock		  "R_ser_ini"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<SOC>"
+		  Labels		  [2, 1]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  2
+		  Points		  [15, 0; 0, -25]
+		  DstBlock		  "R_ser_ini"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "SOC"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Memory"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<current>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  Labels		  [1, 0]
+		  SrcBlock		  "BUS_1_in"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "SOC calculation"
+	      Ports		      [1, 2]
+	      Position		      [390, 431, 475, 489]
+	      ForegroundColor	      "red"
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      Port {
+		PortNumber		1
+		Name			"BUS_1"
+		PropagatedSignals	"SOC, SOC_beg, current, temp, Ah"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	      System {
+		Name			"SOC calculation"
+		Location		[11, 135, 1023, 785]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "BUS_1_in"
+		  Position		  [25, 328, 55, 342]
+		  ForegroundColor	  "red"
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "-->%"
+		  Position		  [680, 99, 720, 131]
+		  Gain			  "100"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		  Port {
+		    PortNumber		    1
+		    Name		    "SOC"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "As -->Ah"
+		  Position		  [335, 218, 410, 252]
+		  Gain			  "1/3600"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		  Port {
+		    PortNumber		    1
+		    Name		    "Ah"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector"
+		  Ports			  [1, 3]
+		  Position		  [85, 255, 90, 415]
+		  ShowName		  off
+		  OutputSignals		  "SOC_beg,current,temp"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<SOC_beg>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "<temp>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Ground
+		  Name			  "Ground"
+		  Position		  [265, 515, 285, 535]
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [5, 1]
+		  Position		  [900, 196, 905, 474]
+		  ShowName		  off
+		  Inputs		  "5"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  Position		  [415, 515, 435, 535]
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator1"
+		  Position		  [180, 30, 200, 50]
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "coulombic efficiency"
+		  Position		  [320, 499, 370, 551]
+		  InputValues		  "[-1 0 1]"
+		  OutputValues		  "[-1 0 battery.eta_coulomb/100]"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "effective capacity / Ah "
+		  Position		  [65, 27, 125, 53]
+		  Value			  "battery.effect_cap"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "gain"
+		  Position		  [255, 88, 320, 122]
+		  Gain			  "1/(battery.effect_cap*3600)"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "initial battery SOC"
+		  Position		  [290, 160, 400, 180]
+		  Value			  "battery.init_SOC/100"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "int"
+		  Ports			  [2, 1]
+		  Position		  [435, 96, 500, 129]
+		  ExternalReset		  "none"
+		  InitialConditionSource  "external"
+		  InitialCondition	  "0"
+		  LimitOutput		  on
+		  UpperSaturationLimit	  "1"
+		  LowerSaturationLimit	  "0"
+		  ShowSaturationPort	  off
+		  ShowStatePort		  off
+		  AbsoluteTolerance	  "auto"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "limits \n->ini-file"
+		  Ports			  [1, 1]
+		  Position		  [270, 219, 300, 251]
+		  ExternalReset		  "none"
+		  InitialConditionSource  "internal"
+		  InitialCondition	  "0"
+		  LimitOutput		  on
+		  UpperSaturationLimit	  "battery.up_lim_soc_calc"
+		  LowerSaturationLimit	  "battery.low_lim_soc_calc"
+		  ShowSaturationPort	  off
+		  ShowStatePort		  off
+		  AbsoluteTolerance	  "auto"
+		  Port {
+		    PortNumber		    1
+		    Name		    "As"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "BUS_1"
+		  Position		  [965, 328, 995, 342]
+		  ForegroundColor	  "red"
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SOC"
+		  Position		  [865, 108, 895, 122]
+		  Port			  "2"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  Name			  "SOC"
+		  Labels		  [1, 0]
+		  SrcBlock		  "-->%"
+		  SrcPort		  1
+		  Points		  [65, 0]
+		  Branch {
+		    Labels		    [-1, 0]
+		    Points		    [0, 110]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "SOC"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "int"
+		  SrcPort		  1
+		  DstBlock		  "-->%"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Ah"
+		  Labels		  [1, 0]
+		  SrcBlock		  "As -->Ah"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 210]
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "As"
+		  Labels		  [1, 0]
+		  SrcBlock		  "limits \n->ini-file"
+		  SrcPort		  1
+		  DstBlock		  "As -->Ah"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<SOC_beg>"
+		  Labels		  [0, 0; 1, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "<current>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  2
+		  Points		  [100, 0]
+		  Branch {
+		    Labels		    [1, 0]
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [0, -170]
+		    Branch {
+		    Points		    [60, 0]
+		    DstBlock		    "limits \n->ini-file"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, -60]
+		    DstBlock		    "gain"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "BUS_1"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<temp>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  3
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "BUS_1_in"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Ground"
+		  SrcPort		  1
+		  DstBlock		  "coulombic efficiency"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "coulombic efficiency"
+		  SrcPort		  1
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "initial battery SOC"
+		  SrcPort		  1
+		  Points		  [15, 0]
+		  DstBlock		  "int"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "gain"
+		  SrcPort		  1
+		  DstBlock		  "int"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "effective capacity / Ah "
+		  SrcPort		  1
+		  DstBlock		  "Terminator1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "SOC_beg3"
+	      Position		      [15, 209, 145, 231]
+	      ShowName		      off
+	      Value		      "battery.init_temp"
+	      VectorParams1D	      on
+	      Port {
+		PortNumber		1
+		Name			"temp"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      Position		      [875, 265, 905, 295]
+	      Threshold		      "0.1"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "U_sum"
+	      Ports		      [4, 1]
+	      Position		      [715, 209, 805, 371]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      System {
+		Name			"U_sum"
+		Location		[35, 130, 500, 633]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "U0"
+		  Position		  [70, 58, 100, 72]
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		  Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "U_0"
+		    ShowPropagatedSignals   "on"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "U_R_ser"
+		  Position		  [70, 178, 100, 192]
+		  Port			  "2"
+		  LatchInput		  off
+		  Interpolate		  on
+		  Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "U_R_ser"
+		    ShowPropagatedSignals   "on"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "U_zarc_1"
+		  Position		  [70, 238, 100, 252]
+		  Port			  "3"
+		  LatchInput		  off
+		  Interpolate		  on
+		  Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "U_zarc1"
+		    ShowPropagatedSignals   "on"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "U_zarc_2"
+		  Position		  [70, 363, 100, 377]
+		  Port			  "4"
+		  LatchInput		  off
+		  Interpolate		  on
+		  Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "U_zarc_2"
+		    ShowPropagatedSignals   "on"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector2"
+		  Ports			  [1, 3]
+		  Position		  [160, 287, 165, 453]
+		  ShowName		  off
+		  OutputSignals		  "U_2c,U_2b,U_2d"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<U_2c>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<U_2b>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "<U_2d>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [5, 1]
+		  Position		  [290, 39, 310, 331]
+		  ShowName		  off
+		  IconShape		  "rectangular"
+		  Inputs		  "+++++"
+		  SaturateOnIntegerOverflow on
+		  Port {
+		    PortNumber		    1
+		    Name		    "U_ges"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [3, 1]
+		  Position		  [225, 290, 240, 450]
+		  ShowName		  off
+		  IconShape		  "rectangular"
+		  Inputs		  "+++"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "U_L"
+		  Position		  [245, 110, 275, 140]
+		  Value			  "0"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "U_Batt"
+		  Position		  [385, 178, 415, 192]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "U_L"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  Labels		  [0, 0]
+		  SrcBlock		  "U_zarc_1"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  4
+		}
+		Line {
+		  Labels		  [1, 1]
+		  SrcBlock		  "U_zarc_2"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, -65]
+		  DstBlock		  "Sum"
+		  DstPort		  5
+		}
+		Line {
+		  Labels		  [1, 1]
+		  SrcBlock		  "U0"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<U_2d>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector2"
+		  SrcPort		  3
+		  DstBlock		  "Sum3"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "<U_2b>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector2"
+		  SrcPort		  2
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "<U_2c>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector2"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "U_ges"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "U_Batt"
+		  DstPort		  1
+		}
+		Line {
+		  Labels		  [0, 0; 1, 1]
+		  SrcBlock		  "U_R_ser"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  3
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Zarc_1"
+	      Ports		      [1, 1]
+	      Position		      [545, 282, 645, 338]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      System {
+		Name			"Zarc_1"
+		Location		[84, 111, 992, 556]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "BUS_1_in"
+		  Position		  [65, 193, 95, 207]
+		  ForegroundColor	  "red"
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		  Port {
+		    PortNumber		    1
+		    Name		    "BUS_1"
+		    PropagatedSignals	    "BUS_1"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector"
+		  Ports			  [1, 1]
+		  Position		  [145, 143, 150, 257]
+		  ShowName		  off
+		  OutputSignals		  "current"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Look-Up for 60 Ah vlies tec"
+		  Position		  [265, 174, 315, 226]
+		  InputValues		  "battery.zarc1_linearity(:,1)"
+		  OutputValues		  "battery.zarc1_linearity(:,2)"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Model Info"
+		  Ports			  []
+		  Position		  [123, 15, 843, 102]
+		  ShowName		  off
+		  FontName		  "Arial"
+		  SourceBlock		  "simulink3/Signals\n& Systems/Model "
+"Info"
+		  SourceType		  "CMBlock"
+		  InitialBlockCM	  "None"
+		  BlockCM		  "None"
+		  Frame			  "on"
+		  DisplayStringWithTags	  "Model Info\n%<ModifiedBy>\n%<Modifi"
+"edDate>\n%<Description>\nsploumen: deleted isea's original ZARC_1 voltage cal"
+"culation, since it has static behaviour that can\\n be described using 1-D lo"
+"ok-up as function of current."
+		  MaskDisplayString	  "Model Info\\nMark\\nFri Aug 29 14:5"
+"7:52 2008\\n\\nsploumen: deleted isea's original ZARC_1 voltage calculation, "
+"since it has static behaviour that can\\n be described using 1-D look-up as f"
+"unction of current."
+		  HorizontalTextAlignment "Center"
+		  LeftAlignmentValue	  "0.5"
+		  SourceBlockDiagram	  "BattTest"
+		  TagMaxNumber		  "20"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [3, 1]
+		  Position		  [455, 184, 500, 276]
+		  Inputs		  "**/"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		  Port {
+		    PortNumber		    1
+		    Name		    "U_zarc1"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "lookup table\nis for 60 Ah"
+		  Position		  [265, 258, 310, 292]
+		  Value			  "60"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "nominal capacity"
+		  Position		  [240, 337, 345, 363]
+		  Value			  "battery.nom_cap"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "U_zarc_1"
+		  Position		  [620, 223, 650, 237]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  Name			  "U_zarc1"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  DstBlock		  "U_zarc_1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "nominal capacity"
+		  SrcPort		  1
+		  Points		  [65, 0; 0, -90]
+		  DstBlock		  "Product3"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "BUS_1"
+		  SrcBlock		  "BUS_1_in"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<current>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  1
+		  DstBlock		  "Look-Up for 60 Ah vlies tec"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "lookup table\nis for 60 Ah"
+		  SrcPort		  1
+		  Points		  [70, 0; 0, -45]
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Look-Up for 60 Ah vlies tec"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Zarc_2"
+	      Ports		      [1, 1]
+	      Position		      [545, 374, 645, 426]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      Port {
+		PortNumber		1
+		Name			"U_zarc_2"
+		PropagatedSignals	"U_2b, U_2c, U_2d"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	      System {
+		Name			"Zarc_2"
+		Location		[-91, 348, 933, 1030]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "BUS_1_in"
+		  Position		  [70, 488, 100, 502]
+		  ForegroundColor	  "red"
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector1"
+		  Ports			  [1, 2]
+		  Position		  [190, 116, 195, 169]
+		  ShowName		  off
+		  OutputSignals		  "temp,SOC"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<temp>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<SOC>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "C_2eff_ini"
+		  Ports			  [2, 1]
+		  Position		  [340, 257, 395, 308]
+		  SourceBlock		  "simulink3/Functions\n& Tables/Look-"
+"Up\nTable (2-D)"
+		  SourceType		  "Lookup Table (2-D)"
+		  x			  "battery.temp_in"
+		  y			  "battery.SOC_in"
+		  t			  "battery.C_2eff_ini"
+		  Port {
+		    PortNumber		    1
+		    Name		    "C_2eff/IN"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Freq1_3\n"
+		  Position		  [435, 332, 505, 378]
+		  InputValues		  "battery.phi_in"
+		  OutputValues		  "battery.Freq1_3"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Freq1_3"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "I_0_ini"
+		  Ports			  [2, 1]
+		  Position		  [340, 187, 395, 238]
+		  SourceBlock		  "simulink3/Functions\n& Tables/Look-"
+"Up\nTable (2-D)"
+		  SourceType		  "Lookup Table (2-D)"
+		  x			  "battery.temp_in"
+		  y			  "battery.SOC_in"
+		  t			  "battery.I_0_ini"
+		  Port {
+		    PortNumber		    1
+		    Name		    "I_0_ini"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [5, 1]
+		  Position		  [605, 34, 610, 396]
+		  ShowName		  off
+		  Inputs		  "5"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RC_Glied_2b"
+		  Ports			  [2, 1]
+		  Position		  [380, 476, 475, 554]
+		  ShowPortLabels	  on
+		  TreatAsAtomicUnit	  off
+		  RTWSystemCode		  "Auto"
+		  RTWFcnNameOpts	  "Auto"
+		  RTWFileNameOpts	  "Auto"
+		  System {
+		    Name		    "RC_Glied_2b"
+		    Location		    [12, 76, 1024, 758]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "BUS_2_in"
+		    Position		    [35, 193, 65, 207]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "BUS_1_in"
+		    Position		    [30, 373, 60, 387]
+		    ForegroundColor	    "red"
+		    Port		    "2"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    Ports		    [1, 2]
+		    Position		    [95, 141, 100, 254]
+		    ShowName		    off
+		    OutputSignals	    "U_2c,Para_bus"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<U_2c>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<Para_bus>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector1"
+		    Ports		    [1, 1]
+		    Position		    [95, 332, 100, 428]
+		    ShowName		    off
+		    OutputSignals	    "current"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector2"
+		    Ports		    [1, 2]
+		    Position		    [305, 246, 310, 359]
+		    ShowName		    off
+		    OutputSignals	    "C_2eff/IN,Freq1_3"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<C_2eff/IN>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<Freq1_3>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Fcn"
+		    Position		    [485, 290, 545, 320]
+		    Expr		    "1/(3*u)"
+		    }
+		    Block {
+		    BlockType		    Integrator
+		    Name		    "Integrator"
+		    Ports		    [1, 1]
+		    Position		    [630, 375, 660, 405]
+		    ExternalReset	    "none"
+		    InitialConditionSource  "internal"
+		    InitialCondition	    "0.1"
+		    LimitOutput		    off
+		    UpperSaturationLimit    "inf"
+		    LowerSaturationLimit    "-inf"
+		    ShowSaturationPort	    off
+		    ShowStatePort	    off
+		    AbsoluteTolerance	    "auto"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    Ports		    [3, 1]
+		    Position		    [900, 141, 905, 309]
+		    ShowName		    off
+		    Inputs		    "3"
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    Ports		    [2, 1]
+		    Position		    [690, 353, 720, 402]
+		    Inputs		    "2"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "U_2b"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [415, 278, 445, 327]
+		    Inputs		    "*/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [2, 1]
+		    Position		    [779, 320, 826, 355]
+		    Orientation		    "up"
+		    NamePlacement	    "alternate"
+		    Inputs		    "2"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "U_2b"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product3"
+		    Ports		    [2, 1]
+		    Position		    [445, 345, 485, 480]
+		    ShowName		    off
+		    Inputs		    "*/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "I_charge/IN"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    Ports		    [2, 1]
+		    Position		    [590, 380, 610, 400]
+		    ShowName		    off
+		    IconShape		    "round"
+		    Inputs		    "|+-"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "int. n.lin. R2"
+		    Ports		    [2, 1]
+		    Position		    [625, 426, 725, 499]
+		    Orientation		    "left"
+		    ShowPortLabels	    on
+		    TreatAsAtomicUnit	    off
+		    RTWSystemCode	    "Auto"
+		    RTWFcnNameOpts	    "Auto"
+		    RTWFileNameOpts	    "Auto"
+		    System {
+		    Name		    "int. n.lin. R2"
+		    Location		    [68, 76, 821, 653]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "U"
+		    Position		    [35, 38, 65, 52]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "fact_I0_alpha"
+		    Position		    [35, 453, 65, 467]
+		    Port		    "2"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    Ports		    [1, 3]
+		    Position		    [95, 427, 100, 493]
+		    ShowName		    off
+		    OutputSignals	    "U_T,alpha,I_0_ini"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<U_T>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<alpha>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "<I_0_ini>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    Position		    [40, 260, 70, 290]
+		    Value		    "3"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Fcn"
+		    Position		    [290, 65, 325, 95]
+		    Expr		    "u-1"
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Math\nFunction"
+		    Ports		    [1, 1]
+		    Position		    [395, 290, 425, 320]
+		    Operator		    "exp"
+		    OutputSignalType	    "auto"
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Math\nFunction1"
+		    Ports		    [1, 1]
+		    Position		    [395, 85, 425, 115]
+		    Operator		    "exp"
+		    OutputSignalType	    "auto"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [200, 252, 215, 348]
+		    ShowName		    off
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [4, 1]
+		    Position		    [345, 212, 360, 393]
+		    ShowName		    off
+		    Inputs		    "***/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product4"
+		    Ports		    [4, 1]
+		    Position		    [345, 31, 360, 164]
+		    ShowName		    off
+		    Inputs		    "***/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product5"
+		    Ports		    [2, 1]
+		    Position		    [600, 327, 615, 423]
+		    ShowName		    off
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum1"
+		    Ports		    [2, 1]
+		    Position		    [490, 71, 510, 344]
+		    ShowName		    off
+		    IconShape		    "rectangular"
+		    Inputs		    "-+"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "n"
+		    Position		    [40, 310, 70, 340]
+		    Value		    "battery.n"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "I"
+		    Position		    [665, 368, 695, 382]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<I_0_ini>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    Points		    [445, 0; 0, -80]
+		    DstBlock		    "Product5"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
+		    Points		    [0, -185]
+		    DstBlock		    "Product4"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 25]
+		    DstBlock		    "Product2"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "n"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product4"
+		    SrcPort		    1
+		    DstBlock		    "Math\nFunction1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product5"
+		    SrcPort		    1
+		    DstBlock		    "I"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Sum1"
+		    SrcPort		    1
+		    Points		    [35, 0; 0, 140]
+		    DstBlock		    "Product5"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Math\nFunction"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -30]
+		    DstBlock		    "Sum1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Math\nFunction1"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, 40]
+		    DstBlock		    "Sum1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    DstBlock		    "Math\nFunction"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "U"
+		    SrcPort		    1
+		    Points		    [0, 0; 150, 0]
+		    Branch {
+		    Points		    [0, 190]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Product4"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Fcn"
+		    SrcPort		    1
+		    DstBlock		    "Product4"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<alpha>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    Points		    [140, 0; 0, -180]
+		    Branch {
+		    Points		    [0, -200]
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    Name		    "<U_T>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    Points		    [90, 0; 0, -70; 100, 0]
+		    Branch {
+		    Points		    [0, -220]
+		    DstBlock		    "Product4"
+		    DstPort		    4
+		    }
+		    Branch {
+		    DstBlock		    "Product2"
+		    DstPort		    4
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "fact_I0_alpha"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "nominal capacity"
+		    Position		    [260, 428, 305, 462]
+		    Value		    "battery.nom_cap"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "nominal current"
+		    Position		    [360, 428, 405, 462]
+		    Gain		    "1/20"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "nominal voltage"
+		    Position		    [625, 533, 680, 567]
+		    Value		    "battery.nom_volt"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "number of\nbattery cells"
+		    Position		    [715, 534, 755, 566]
+		    Gain		    "0.5"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "BUS_2_out"
+		    Position		    [935, 218, 965, 232]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    Name		    "<current>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector1"
+		    SrcPort		    1
+		    DstBlock		    "Product3"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "nominal current"
+		    SrcPort		    1
+		    DstBlock		    "Product3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "nominal capacity"
+		    SrcPort		    1
+		    DstBlock		    "nominal current"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "I_charge/IN"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Product3"
+		    SrcPort		    1
+		    Points		    [30, 0; 0, -25]
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "number of\nbattery cells"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "nominal voltage"
+		    SrcPort		    1
+		    DstBlock		    "number of\nbattery cells"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Fcn"
+		    SrcPort		    1
+		    Points		    [60, 0; 0, 60]
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<Freq1_3>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    2
+		    Points		    [55, 0; 0, -15]
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<C_2eff/IN>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    1
+		    Points		    [55, 0; 0, 15]
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<Para_bus>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    Points		    [175, 0]
+		    Branch {
+		    Points		    [0, 80]
+		    DstBlock		    "Bus\nSelector2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [560, 0]
+		    Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 255]
+		    DstBlock		    "int. n.lin. R2"
+		    DstPort		    2
+		    }
+		    }
+		    }
+		    Line {
+		    Name		    "<U_2c>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "U_2b"
+		    Labels		    [1, 0]
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    Points		    [0, -35]
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "BUS_2_out"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "BUS_1_in"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "U_2b"
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    Points		    [50, 0]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "int. n.lin. R2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "int. n.lin. R2"
+		    SrcPort		    1
+		    Points		    [-20, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Integrator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Integrator"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    Labels		    [1, 0]
+		    SrcBlock		    "BUS_2_in"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RC_Glied_2c"
+		  Ports			  [2, 1]
+		  Position		  [250, 476, 345, 554]
+		  ShowPortLabels	  on
+		  TreatAsAtomicUnit	  off
+		  RTWSystemCode		  "Auto"
+		  RTWFcnNameOpts	  "Auto"
+		  RTWFileNameOpts	  "Auto"
+		  System {
+		    Name		    "RC_Glied_2c"
+		    Location		    [-21, 97, 991, 713]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "BUS_1_in"
+		    Position		    [250, 263, 280, 277]
+		    ForegroundColor	    "red"
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Para_Bus"
+		    Position		    [255, 183, 285, 197]
+		    Port		    "2"
+		    LatchInput		    off
+		    Interpolate		    on
+		    Port {
+		    PortNumber		    1
+		    Name		    "Para_bus"
+		    PropagatedSignals	    "U_T, alpha, I_0_ini, C_2eff/IN, F"
+"req1_3"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector1"
+		    Ports		    [1, 1]
+		    Position		    [325, 233, 330, 307]
+		    ShowName		    off
+		    OutputSignals	    "current"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector2"
+		    Ports		    [1, 1]
+		    Position		    [325, 153, 330, 227]
+		    ShowName		    off
+		    OutputSignals	    "C_2eff/IN"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<C_2eff/IN>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Fcn"
+		    Position		    [525, 175, 585, 205]
+		    Expr		    "1/(3*u)"
+		    }
+		    Block {
+		    BlockType		    Integrator
+		    Name		    "Integrator"
+		    Ports		    [1, 1]
+		    Position		    [525, 265, 555, 295]
+		    ExternalReset	    "none"
+		    InitialConditionSource  "internal"
+		    InitialCondition	    "0.1"
+		    LimitOutput		    off
+		    UpperSaturationLimit    "inf"
+		    LowerSaturationLimit    "-inf"
+		    ShowSaturationPort	    off
+		    ShowStatePort	    off
+		    AbsoluteTolerance	    "auto"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    Ports		    [2, 1]
+		    Position		    [890, 75, 895, 355]
+		    ShowName		    off
+		    Inputs		    "2"
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    Ports		    [2, 1]
+		    Position		    [610, 256, 655, 289]
+		    Inputs		    "2"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "U_2c"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [820, 229, 845, 416]
+		    ShowName		    off
+		    Inputs		    "2"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "U_2c"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [2, 1]
+		    Position		    [420, 261, 465, 294]
+		    Inputs		    "*/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    Ports		    [2, 1]
+		    Position		    [480, 270, 500, 290]
+		    ShowName		    off
+		    IconShape		    "round"
+		    Inputs		    "|+-"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "int. n.lin. R2"
+		    Ports		    [2, 1]
+		    Position		    [525, 344, 625, 406]
+		    Orientation		    "left"
+		    ShowPortLabels	    on
+		    TreatAsAtomicUnit	    off
+		    RTWSystemCode	    "Auto"
+		    RTWFcnNameOpts	    "Auto"
+		    RTWFileNameOpts	    "Auto"
+		    Port {
+		    PortNumber		    1
+		    Name		    "I_R_2c"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    System {
+		    Name		    "int. n.lin. R2"
+		    Location		    [40, 46, 944, 644]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "U"
+		    Position		    [105, 53, 135, 67]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "fact_I0_alpha"
+		    Position		    [90, 478, 120, 492]
+		    Port		    "2"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    Ports		    [1, 3]
+		    Position		    [155, 439, 160, 531]
+		    ShowName		    off
+		    OutputSignals	    "U_T,alpha,I_0_ini"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<U_T>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<alpha>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "<I_0_ini>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    Position		    [175, 320, 205, 350]
+		    Value		    "3"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Fcn"
+		    Position		    [430, 80, 465, 110]
+		    ShowName		    off
+		    Expr		    "u-1"
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Math\nFunction"
+		    Ports		    [1, 1]
+		    Position		    [535, 305, 565, 335]
+		    ShowName		    off
+		    Operator		    "exp"
+		    OutputSignalType	    "auto"
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Math\nFunction2"
+		    Ports		    [1, 1]
+		    Position		    [535, 100, 565, 130]
+		    ShowName		    off
+		    Operator		    "exp"
+		    OutputSignalType	    "auto"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [310, 268, 325, 357]
+		    ShowName		    off
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [4, 1]
+		    Position		    [485, 227, 500, 408]
+		    ShowName		    off
+		    Inputs		    "***/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product4"
+		    Ports		    [4, 1]
+		    Position		    [485, 46, 500, 179]
+		    ShowName		    off
+		    Inputs		    "***/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product5"
+		    Ports		    [2, 1]
+		    Position		    [740, 341, 755, 414]
+		    ShowName		    off
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum1"
+		    Ports		    [2, 1]
+		    Position		    [630, 86, 650, 359]
+		    ShowName		    off
+		    IconShape		    "rectangular"
+		    Inputs		    "-+"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "n"
+		    Position		    [175, 275, 205, 305]
+		    Value		    "battery.n"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "I_R"
+		    Position		    [795, 373, 825, 387]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "fact_I0_alpha"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    Points		    [85, 0]
+		    Branch {
+		    Points		    [0, -185]
+		    DstBlock		    "Product4"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 25]
+		    DstBlock		    "Product2"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "n"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product5"
+		    SrcPort		    1
+		    DstBlock		    "I_R"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Sum1"
+		    SrcPort		    1
+		    Points		    [35, 0; 0, 135]
+		    DstBlock		    "Product5"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<I_0_ini>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    Points		    [525, 0; 0, -120]
+		    DstBlock		    "Product5"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Math\nFunction"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -30]
+		    DstBlock		    "Sum1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Math\nFunction2"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, 40]
+		    DstBlock		    "Sum1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product4"
+		    SrcPort		    1
+		    DstBlock		    "Math\nFunction2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    DstBlock		    "Math\nFunction"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "U"
+		    SrcPort		    1
+		    Points		    [70, 0; 150, 0]
+		    Branch {
+		    Points		    [0, 190]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Product4"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Fcn"
+		    SrcPort		    1
+		    DstBlock		    "Product4"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<alpha>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    Points		    [220, 0; 0, -190]
+		    Branch {
+		    Points		    [0, -200]
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    Name		    "<U_T>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    Points		    [175, 0; 0, -70; 95, 0]
+		    Branch {
+		    Points		    [0, -220]
+		    DstBlock		    "Product4"
+		    DstPort		    4
+		    }
+		    Branch {
+		    DstBlock		    "Product2"
+		    DstPort		    4
+		    }
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "nominal capacity"
+		    Position		    [255, 343, 300, 377]
+		    Value		    "battery.nom_cap"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "nominal current"
+		    Position		    [355, 343, 400, 377]
+		    Gain		    "1/20"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "nominal voltage"
+		    Position		    [660, 448, 715, 482]
+		    Value		    "battery.nom_volt"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "number of\nbattery cells"
+		    Position		    [755, 354, 795, 386]
+		    Gain		    "0.5"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "BUS_2_out"
+		    Position		    [935, 208, 965, 222]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "nominal current"
+		    SrcPort		    1
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<current>"
+		    Labels		    [-1, 1]
+		    SrcBlock		    "Bus\nSelector1"
+		    SrcPort		    1
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "nominal capacity"
+		    SrcPort		    1
+		    DstBlock		    "nominal current"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "number of\nbattery cells"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "nominal voltage"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, -95]
+		    DstBlock		    "number of\nbattery cells"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "BUS_2_out"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Fcn"
+		    SrcPort		    1
+		    Points		    [5, 0]
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<C_2eff/IN>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    1
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "Para_bus"
+		    SrcBlock		    "Para_Bus"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    Labels		    [2, 0]
+		    Points		    [0, -45; 405, 0]
+		    Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 245]
+		    DstBlock		    "int. n.lin. R2"
+		    DstPort		    2
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "Bus\nSelector2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    Name		    "U_2c"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, -40]
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "I_R_2c"
+		    SrcBlock		    "int. n.lin. R2"
+		    SrcPort		    1
+		    Points		    [-30, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "BUS_1_in"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Integrator"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "U_2c"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [40, 0]
+		    Branch {
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 85]
+		    DstBlock		    "int. n.lin. R2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Integrator"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "RC_Glied_2d"
+		  Ports			  [2, 1]
+		  Position		  [520, 476, 615, 554]
+		  ShowPortLabels	  on
+		  TreatAsAtomicUnit	  off
+		  RTWSystemCode		  "Auto"
+		  RTWFcnNameOpts	  "Auto"
+		  RTWFileNameOpts	  "Auto"
+		  System {
+		    Name		    "RC_Glied_2d"
+		    Location		    [10, 76, 1022, 758]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "BUS_2_in"
+		    Position		    [40, 198, 70, 212]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "BUS_1_in"
+		    Position		    [40, 373, 70, 387]
+		    ForegroundColor	    "red"
+		    Port		    "2"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    Ports		    [1, 3]
+		    Position		    [95, 142, 100, 268]
+		    ShowName		    off
+		    OutputSignals	    "U_2b,U_2c,Para_bus"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<U_2b>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<U_2c>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "<Para_bus>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector1"
+		    Ports		    [1, 1]
+		    Position		    [95, 332, 100, 428]
+		    ShowName		    off
+		    OutputSignals	    "current"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector2"
+		    Ports		    [1, 2]
+		    Position		    [315, 256, 320, 369]
+		    ShowName		    off
+		    OutputSignals	    "C_2eff/IN,Freq1_3"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<C_2eff/IN>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<Freq1_3>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Fcn"
+		    Position		    [485, 300, 545, 330]
+		    Expr		    "1/(3*u)"
+		    }
+		    Block {
+		    BlockType		    Integrator
+		    Name		    "Integrator"
+		    Ports		    [1, 1]
+		    Position		    [630, 375, 660, 405]
+		    ExternalReset	    "none"
+		    InitialConditionSource  "internal"
+		    InitialCondition	    "0.1"
+		    LimitOutput		    off
+		    UpperSaturationLimit    "inf"
+		    LowerSaturationLimit    "-inf"
+		    ShowSaturationPort	    off
+		    ShowStatePort	    off
+		    AbsoluteTolerance	    "auto"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    Ports		    [3, 1]
+		    Position		    [905, 141, 910, 269]
+		    ShowName		    off
+		    Inputs		    "3"
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    Ports		    [2, 1]
+		    Position		    [690, 353, 720, 402]
+		    Inputs		    "2"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "U_2b"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [415, 288, 445, 337]
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [2, 1]
+		    Position		    [769, 310, 816, 345]
+		    Orientation		    "up"
+		    NamePlacement	    "alternate"
+		    Inputs		    "2"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "U_2d"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product3"
+		    Ports		    [2, 1]
+		    Position		    [445, 371, 490, 404]
+		    Inputs		    "*/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    Port {
+		    PortNumber		    1
+		    Name		    "I_charge/IN"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    Ports		    [2, 1]
+		    Position		    [590, 380, 610, 400]
+		    ShowName		    off
+		    IconShape		    "round"
+		    Inputs		    "|+-"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "int. n.lin. R2"
+		    Ports		    [2, 1]
+		    Position		    [625, 426, 725, 499]
+		    Orientation		    "left"
+		    ShowPortLabels	    on
+		    TreatAsAtomicUnit	    off
+		    RTWSystemCode	    "Auto"
+		    RTWFcnNameOpts	    "Auto"
+		    RTWFileNameOpts	    "Auto"
+		    System {
+		    Name		    "int. n.lin. R2"
+		    Location		    [68, 76, 821, 653]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "U"
+		    Position		    [35, 38, 65, 52]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "fact_I0_alpha"
+		    Position		    [35, 453, 65, 467]
+		    Port		    "2"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    Ports		    [1, 3]
+		    Position		    [95, 427, 100, 493]
+		    ShowName		    off
+		    OutputSignals	    "U_T,alpha,I_0_ini"
+		    MuxedOutput		    off
+		    Port {
+		    PortNumber		    1
+		    Name		    "<U_T>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "<alpha>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    Port {
+		    PortNumber		    3
+		    Name		    "<I_0_ini>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    Position		    [40, 260, 70, 290]
+		    Value		    "3"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Fcn
+		    Name		    "Fcn"
+		    Position		    [290, 65, 325, 95]
+		    Expr		    "u-1"
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Math\nFunction"
+		    Ports		    [1, 1]
+		    Position		    [395, 290, 425, 320]
+		    ShowName		    off
+		    Operator		    "exp"
+		    OutputSignalType	    "auto"
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Math\nFunction1"
+		    Ports		    [1, 1]
+		    Position		    [395, 85, 425, 115]
+		    ShowName		    off
+		    Operator		    "exp"
+		    OutputSignalType	    "auto"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [200, 252, 215, 348]
+		    ShowName		    off
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [4, 1]
+		    Position		    [345, 212, 360, 393]
+		    ShowName		    off
+		    Inputs		    "***/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product4"
+		    Ports		    [4, 1]
+		    Position		    [345, 31, 360, 164]
+		    ShowName		    off
+		    Inputs		    "***/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product5"
+		    Ports		    [2, 1]
+		    Position		    [600, 327, 615, 423]
+		    ShowName		    off
+		    Inputs		    "**"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum1"
+		    Ports		    [2, 1]
+		    Position		    [490, 71, 510, 344]
+		    ShowName		    off
+		    IconShape		    "rectangular"
+		    Inputs		    "-+"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "n"
+		    Position		    [40, 310, 70, 340]
+		    Value		    "battery.n"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "I"
+		    Position		    [665, 368, 695, 382]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<I_0_ini>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    Points		    [445, 0; 0, -80]
+		    DstBlock		    "Product5"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    Points		    [55, 0]
+		    Branch {
+		    Points		    [0, -185]
+		    DstBlock		    "Product4"
+		    DstPort		    3
+		    }
+		    Branch {
+		    Points		    [0, 25]
+		    DstBlock		    "Product2"
+		    DstPort		    3
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "n"
+		    SrcPort		    1
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product4"
+		    SrcPort		    1
+		    DstBlock		    "Math\nFunction1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product5"
+		    SrcPort		    1
+		    DstBlock		    "I"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Sum1"
+		    SrcPort		    1
+		    Points		    [35, 0; 0, 140]
+		    DstBlock		    "Product5"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Math\nFunction"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -30]
+		    DstBlock		    "Sum1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Math\nFunction1"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, 40]
+		    DstBlock		    "Sum1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    DstBlock		    "Math\nFunction"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "U"
+		    SrcPort		    1
+		    Points		    [0, 0; 150, 0]
+		    Branch {
+		    Points		    [0, 190]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Product4"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Fcn"
+		    SrcPort		    1
+		    DstBlock		    "Product4"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<alpha>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    Points		    [140, 0; 0, -180]
+		    Branch {
+		    Points		    [0, -200]
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    Name		    "<U_T>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    Points		    [90, 0; 0, -70; 100, 0]
+		    Branch {
+		    Points		    [0, -220]
+		    DstBlock		    "Product4"
+		    DstPort		    4
+		    }
+		    Branch {
+		    DstBlock		    "Product2"
+		    DstPort		    4
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "fact_I0_alpha"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "nominal capacity"
+		    Position		    [265, 428, 310, 462]
+		    Value		    "battery.nom_cap"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "nominal current"
+		    Position		    [365, 428, 410, 462]
+		    Gain		    "1/20"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "nominal voltage"
+		    Position		    [625, 528, 680, 562]
+		    Value		    "battery.nom_volt"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "number of\nbattery cells"
+		    Position		    [710, 529, 750, 561]
+		    Gain		    "0.5"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "BUS_2_out"
+		    Position		    [935, 198, 965, 212]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    Name		    "<current>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector1"
+		    SrcPort		    1
+		    DstBlock		    "Product3"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "I_charge/IN"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Product3"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "nominal current"
+		    SrcPort		    1
+		    Points		    [0, -50]
+		    DstBlock		    "Product3"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "nominal capacity"
+		    SrcPort		    1
+		    DstBlock		    "nominal current"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "number of\nbattery cells"
+		    SrcPort		    1
+		    Points		    [50, 0]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "nominal voltage"
+		    SrcPort		    1
+		    DstBlock		    "number of\nbattery cells"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<U_2c>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    2
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<U_2b>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "U_2d"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    Points		    [0, -20; 75, 0; 0, -40]
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Fcn"
+		    SrcPort		    1
+		    Points		    [60, 0; 0, 50]
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    DstBlock		    "Fcn"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<Freq1_3>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    2
+		    Points		    [45, 0; 0, -15]
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "<C_2eff/IN>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector2"
+		    SrcPort		    1
+		    Points		    [45, 0; 0, 15]
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<Para_bus>"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    3
+		    Points		    [175, 0]
+		    Branch {
+		    Points		    [560, 0; 0, 235]
+		    DstBlock		    "int. n.lin. R2"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "Bus\nSelector2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "BUS_2_out"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "BUS_1_in"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector1"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "U_2b"
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    Points		    [0, -20]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "int. n.lin. R2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "int. n.lin. R2"
+		    SrcPort		    1
+		    Points		    [-20, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Integrator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Integrator"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    Labels		    [1, 0]
+		    SrcBlock		    "BUS_2_in"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "alpha"
+		  Ports			  [2, 1]
+		  Position		  [340, 117, 395, 168]
+		  SourceBlock		  "simulink3/Functions\n& Tables/Look-"
+"Up\nTable (2-D)"
+		  SourceType		  "Lookup Table (2-D)"
+		  x			  "battery.temp_in"
+		  y			  "battery.SOC_in"
+		  t			  "battery.alpha"
+		  Port {
+		    PortNumber		    1
+		    Name		    "alpha"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "calculation U_T"
+		  Ports			  [1, 1]
+		  Position		  [340, 56, 410, 94]
+		  ShowPortLabels	  on
+		  TreatAsAtomicUnit	  off
+		  RTWSystemCode		  "Auto"
+		  RTWFcnNameOpts	  "Auto"
+		  RTWFileNameOpts	  "Auto"
+		  Port {
+		    PortNumber		    1
+		    Name		    "U_T"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  System {
+		    Name		    "calculation U_T"
+		    Location		    [393, 215, 900, 563]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "temp"
+		    Position		    [95, 93, 125, 107]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Ah .. As"
+		    Position		    [185, 209, 250, 241]
+		    Gain		    "3600"
+		    Multiplication	    "Element-wise(K.*u)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    Position		    [75, 36, 125, 64]
+		    Value		    "273.15"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant1"
+		    Position		    [80, 156, 130, 184]
+		    Value		    "battery.R"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant2"
+		    Position		    [80, 211, 130, 239]
+		    Value		    "battery.F"
+		    VectorParams1D	    on
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    Ports		    [3, 1]
+		    Position		    [305, 89, 330, 251]
+		    Inputs		    "**/"
+		    Multiplication	    "Element-wise(.*)"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    Ports		    [2, 1]
+		    Position		    [175, 27, 190, 123]
+		    ShowName		    off
+		    IconShape		    "rectangular"
+		    Inputs		    "++"
+		    SaturateOnIntegerOverflow on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "U_T"
+		    Position		    [380, 163, 410, 177]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    DstBlock		    "U_T"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Ah .. As"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "Constant2"
+		    SrcPort		    1
+		    DstBlock		    "Ah .. As"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    Points		    [35, 0; 0, 40]
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "temp"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    Position		    [182, 134]
+		    Text		    "°C -> °K"
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "phi_2"
+		  Ports			  [2, 1]
+		  Position		  [340, 327, 395, 378]
+		  SourceBlock		  "simulink3/Functions\n& Tables/Look-"
+"Up\nTable (2-D)"
+		  SourceType		  "Lookup Table (2-D)"
+		  x			  "battery.temp_in"
+		  y			  "battery.SOC_in"
+		  t			  "battery.phi_2"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "U_zarc_2"
+		  Position		  [685, 508, 715, 522]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  Name			  "I_0_ini"
+		  Labels		  [1, 0]
+		  SrcBlock		  "I_0_ini"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "C_2eff/IN"
+		  Labels		  [1, 0]
+		  SrcBlock		  "C_2eff_ini"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "RC_Glied_2d"
+		  SrcPort		  1
+		  DstBlock		  "U_zarc_2"
+		  DstPort		  1
+		}
+		Line {
+		  Labels		  [2, 0]
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [25, 0; 0, 210; -415, 0; 0, 110]
+		  DstBlock		  "RC_Glied_2c"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "Freq1_3"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Freq1_3\n"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "alpha"
+		  Labels		  [1, 0]
+		  SrcBlock		  "alpha"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "U_T"
+		  Labels		  [1, 0]
+		  SrcBlock		  "calculation U_T"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "phi_2"
+		  SrcPort		  1
+		  DstBlock		  "Freq1_3\n"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<temp>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  1
+		  Points		  [-10, 0; 100, 0]
+		  Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "phi_2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "C_2eff_ini"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "I_0_ini"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, -55]
+		    DstBlock		    "calculation U_T"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "alpha"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "<SOC>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  2
+		  Points		  [-10, 0; 70, 0]
+		  Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    Points		    [0, 70]
+		    Branch {
+		    Points		    [0, 70]
+		    DstBlock		    "phi_2"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "C_2eff_ini"
+		    DstPort		    2
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "I_0_ini"
+		    DstPort		    2
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "alpha"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  Labels		  [1, 0]
+		  SrcBlock		  "RC_Glied_2b"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "RC_Glied_2d"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "RC_Glied_2c"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -20]
+		  DstBlock		  "RC_Glied_2b"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "BUS_1_in"
+		  SrcPort		  1
+		  Points		  [0, 0; 35, 0]
+		  Branch {
+		    Points		    [0, 0]
+		    Branch {
+		    Points		    [0, -350]
+		    DstBlock		    "Bus\nSelector1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [15, 0]
+		    DstBlock		    "RC_Glied_2c"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, 90; 220, 0]
+		    Branch {
+		    Labels		    [1, 1]
+		    Points		    [145, 0]
+		    DstBlock		    "RC_Glied_2d"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, -50]
+		    DstBlock		    "RC_Glied_2b"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Annotation {
+		  Position		  [221, 394]
+		  Text			  "BUS_1:  <charge current>\n         "
+" <SOC>\n           <temp>"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "charge acceptance\nand HSOC gassing"
+	      Ports		      [4, 3]
+	      Position		      [220, 43, 320, 237]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      System {
+		Name			"charge acceptance\nand HSOC gassing"
+		Location		[93, 317, 684, 617]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "U_set"
+		  Position		  [50, 18, 80, 32]
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "USlope_set"
+		  Position		  [50, 53, 80, 67]
+		  Port			  "2"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [50, 173, 80, 187]
+		  Port			  "3"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "SOC"
+		  Position		  [50, 88, 80, 102]
+		  Port			  "4"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector1"
+		  Ports			  [1, 3]
+		  Position		  [130, 120, 135, 240]
+		  ShowName		  off
+		  OutputSignals		  "current,SOC_beg,temp"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<current>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<SOC_beg>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "<temp>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [315, 26, 435, 54]
+		  Value			  "battery.I_max_regen"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [3, 1]
+		  Position		  [455, 122, 460, 238]
+		  ShowName		  off
+		  Inputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  Position		  [145, 15, 165, 35]
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator1"
+		  Position		  [145, 50, 165, 70]
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator2"
+		  Position		  [145, 85, 165, 105]
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "charge acceptance"
+		  Ports			  [1, 1]
+		  Position		  [260, 124, 320, 156]
+		  ShowPortLabels	  on
+		  TreatAsAtomicUnit	  off
+		  RTWSystemCode		  "Auto"
+		  RTWFcnNameOpts	  "Auto"
+		  RTWFileNameOpts	  "Auto"
+		  System {
+		    Name		    "charge acceptance"
+		    Location		    [326, 136, 798, 382]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "In1"
+		    Position		    [45, 43, 75, 57]
+		    Port		    "1"
+		    LatchInput		    off
+		    Interpolate		    on
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    Position		    [405, 43, 435, 57]
+		    Port		    "1"
+		    OutputWhenDisabled	    "held"
+		    InitialOutput	    "[]"
+		    }
+		    Line {
+		    SrcBlock		    "In1"
+		    SrcPort		    1
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "I_bat_max_charge"
+		  Position		  [505, 33, 535, 47]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "I_batt"
+		  Position		  [505, 98, 535, 112]
+		  Port			  "2"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [505, 173, 535, 187]
+		  Port			  "3"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector1"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<SOC_beg>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  2
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "<temp>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  3
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<current>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector1"
+		  SrcPort		  1
+		  DstBlock		  "charge acceptance"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "charge acceptance"
+		  SrcPort		  1
+		  Points		  [60, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -35]
+		    DstBlock		    "I_batt"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "U_set"
+		  SrcPort		  1
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "USlope_set"
+		  SrcPort		  1
+		  DstBlock		  "Terminator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "SOC"
+		  SrcPort		  1
+		  DstBlock		  "Terminator2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "I_bat_max_charge"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "dc voltage"
+	      Ports		      [1, 1]
+	      Position		      [545, 155, 645, 205]
+	      ShowPortLabels	      on
+	      TreatAsAtomicUnit	      off
+	      RTWSystemCode	      "Auto"
+	      RTWFcnNameOpts	      "Auto"
+	      RTWFileNameOpts	      "Auto"
+	      Port {
+		PortNumber		1
+		Name			"U_0"
+		TestPoint		off
+		LinearAnalysisOutput	off
+		LinearAnalysisInput	off
+		RTWStorageClass		"Auto"
+	      }
+	      System {
+		Name			"dc voltage"
+		Location		[89, 214, 931, 680]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "BUS_1"
+		  Position		  [15, 188, 45, 202]
+		  ForegroundColor	  "red"
+		  Port			  "1"
+		  LatchInput		  off
+		  Interpolate		  on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "\n"
+		  Position		  [415, 105, 445, 135]
+		  Value			  "25"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector"
+		  Ports			  [1, 3]
+		  Position		  [75, 134, 80, 256]
+		  ShowName		  off
+		  OutputSignals		  "temp,SOC_beg,Ah"
+		  MuxedOutput		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "<temp>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<SOC_beg>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "<Ah>"
+		    TestPoint		    off
+		    LinearAnalysisOutput    off
+		    LinearAnalysisInput	    off
+		    RTWStorageClass	    "Auto"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [400, 241, 490, 259]
+		  Value			  "battery.m_Battvoll"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Farady Constant"
+		  Position		  [130, 265, 160, 295]
+		  Value			  "battery.F"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn"
+		  Position		  [165, 180, 225, 210]
+		  Expr			  "1-(u/100)"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [555, 250, 615, 280]
+		  Expr			  "1.9228+(0.147519*(log10(u)))+(0.063"
+"552*((log10(u))^2))+(0.073772*((log10(u))^3))+(0.033612*((log10(u))^4))"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [515, 78, 590, 112]
+		  Gain			  "0.0002"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [3, 1]
+		  Position		  [375, 158, 390, 402]
+		  Inputs		  "*//"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  Ports			  [2, 1]
+		  Position		  [260, 105, 275, 225]
+		  ShowName		  off
+		  Inputs		  "**"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [730, 171, 750, 429]
+		  ShowName		  off
+		  Inputs		  "**"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [2, 1]
+		  Position		  [300, 322, 315, 398]
+		  ShowName		  off
+		  Inputs		  "**"
+		  Multiplication	  "Element-wise(.*)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [510, 233, 530, 297]
+		  ShowName		  off
+		  IconShape		  "rectangular"
+		  Inputs		  "++"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum1"
+		  Ports			  [2, 1]
+		  Position		  [305, 129, 320, 271]
+		  ShowName		  off
+		  IconShape		  "rectangular"
+		  Inputs		  "-+"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  Ports			  [2, 1]
+		  Position		  [470, 85, 490, 105]
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|+-"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum4"
+		  Ports			  [2, 1]
+		  Position		  [650, 176, 665, 294]
+		  ShowName		  off
+		  IconShape		  "rectangular"
+		  Inputs		  "++"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "mass of electrolyte"
+		  Position		  [120, 324, 165, 356]
+		  Value			  "battery.M_el_ini"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "nominal\ncapacity"
+		  Position		  [160, 120, 225, 150]
+		  Value			  "battery.nom_cap"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "nominal current"
+		  Position		  [240, 364, 280, 396]
+		  Gain			  "1/20"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "nominal voltage"
+		  Position		  [590, 348, 645, 382]
+		  Value			  "battery.nom_volt"
+		  VectorParams1D	  on
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "number of\nbattery cells"
+		  Position		  [670, 349, 710, 381]
+		  Gain			  "0.5"
+		  Multiplication	  "Element-wise(K.*u)"
+		  SaturateOnIntegerOverflow on
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "U_0"
+		  Position		  [795, 293, 825, 307]
+		  Port			  "1"
+		  OutputWhenDisabled	  "held"
+		  InitialOutput		  "[]"
+		}
+		Line {
+		  SrcBlock		  "nominal current"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "mass of electrolyte"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "number of\nbattery cells"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "nominal voltage"
+		  SrcPort		  1
+		  DstBlock		  "number of\nbattery cells"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 110]
+		  DstBlock		  "Sum4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum4"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "\n"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "<temp>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -60]
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "U_0"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Sum4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum1"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<Ah>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  3
+		  DstBlock		  "Sum1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  DstBlock		  "Sum1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "<SOC_beg>"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  2
+		  DstBlock		  "Fcn"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "nominal\ncapacity"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    Points		    [0, 165; -15, 0]
+		    DstBlock		    "nominal current"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Farady Constant"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "BUS_1"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nSelector"
+		  DstPort		  1
+		}
+		Annotation {
+		  Position		  [479, 45]
+		  Text			  "Fcn1 besitzt Gültigkeit für 25°C.\n"
+"Angleichung von Fcn1 an verschiedene\nTemperaturen mit 0.2mV/°K."
+		}
+		Annotation {
+		  Position		  [494, 402]
+		  Text			  "Batterie wird innerhalb des\nModell"
+"s als Verbraucher \nbetrachtet. Somit bedeutet\npositiver Strom Ladestrom.\nB"
+"ei Ladung erhöht sich die \nRuhespannung"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_Batt_max_charge"
+	      Position		      [930, 68, 960, 82]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "I_Batt"
+	      Position		      [930, 133, 960, 147]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "BUS_U_out"
+	      Position		      [930, 273, 960, 287]
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "SOC"
+	      Position		      [545, 468, 575, 482]
+	      Port		      "4"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "SOC calculation"
+	      SrcPort		      2
+	      Points		      [30, 0]
+	      Branch {
+		DstBlock		"SOC"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 40; -315, 0; 0, -300]
+		DstBlock		"charge acceptance\nand HSOC gassing"
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      Name		      "temp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SOC_beg3"
+	      SrcPort		      1
+	      Points		      [20, 0; 0, -30]
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "BUS_1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "BUS_1_in1"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "charge acceptance\nand HSOC gassing"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<SOC_beg>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      2
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "<current>"
+	      Labels		      [1, 1]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Zarc_1"
+	      SrcPort		      1
+	      DstBlock		      "U_sum"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "U_zarc_2"
+	      Labels		      [1, 1]
+	      SrcBlock		      "Zarc_2"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, -50]
+	      DstBlock		      "U_sum"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "BUS_1"
+	      Labels		      [2, 0]
+	      SrcBlock		      "SOC calculation"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -45]
+	      Branch {
+		DstBlock		"Zarc_2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 0; 0, -90]
+		Branch {
+		  Points		  [0, -130]
+		  Branch {
+		    DstBlock		    "dc voltage"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [-150, 0; 0, 75]
+		    DstBlock		    "R_ser"
+		    DstPort		    1
+		  }
+		}
+		Branch {
+		  DstBlock		  "Zarc_1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      Name		      "U_0"
+	      Labels		      [1, 0]
+	      SrcBlock		      "dc voltage"
+	      SrcPort		      1
+	      Points		      [40, 0; 0, 50]
+	      DstBlock		      "U_sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "U_R_ser"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "R_ser"
+	      SrcPort		      1
+	      DstBlock		      "U_sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "charge acceptance\nand HSOC gassing"
+	      SrcPort		      3
+	      Points		      [15, 0; 0, 75]
+	      Branch {
+		DstBlock		"R_ser"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 180]
+		DstBlock		"SOC calculation"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "U_sum"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "BUS_U_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "charge acceptance\nand HSOC gassing"
+	      SrcPort		      2
+	      Points		      [500, 0]
+	      Branch {
+		DstBlock		"I_Batt"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 140]
+		DstBlock		"Switch"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "charge acceptance\nand HSOC gassing"
+	      SrcPort		      1
+	      DstBlock		      "I_Batt_max_charge"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "USlope_set"
+	      SrcPort		      1
+	      Points		      [55, 0; 0, 15]
+	      DstBlock		      "charge acceptance\nand HSOC gassing"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "U_set"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		Points			[0, 40]
+		DstBlock		"charge acceptance\nand HSOC gassing"
+		DstPort			1
+	      }
+	      Branch {
+		Points			"[650, 0; 0, 40; 5, 0; 0, 20; -5, 0; 0"
+", 45; 5, 0; 0, 20; -5, 0; 0, 120]"
+		DstBlock		"Switch"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Position		      [427, 170]
+	      Text		      "feedback \"SOC\""
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [255, 94, 260, 176]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "BUS_1"
+	    PropagatedSignals	    "current, SOC_beg"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "initial battery SOC"
+	  Position		  [85, 145, 190, 165]
+	  Value			  "SOC_beg"
+	  VectorParams1D	  on
+	  Port {
+	    PortNumber		    1
+	    Name		    "SOC_beg"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "SOC"
+	  Position		  [540, 253, 570, 267]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "U_Batt"
+	  Position		  [540, 208, 570, 222]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "I_Batt"
+	  Position		  [540, 163, 570, 177]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "I_Batt_max_charge"
+	  Position		  [540, 118, 570, 132]
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Batterie"
+	  SrcPort		  4
+	  DstBlock		  "SOC"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "BUS_U"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Batterie"
+	  SrcPort		  3
+	  DstBlock		  "U_Batt"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "BUS_1"
+	  Labels		  [2, 1]
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  DstBlock		  "Batterie"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "SOC_beg"
+	  Labels		  [1, 1]
+	  SrcBlock		  "initial battery SOC"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "I_Input"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Batterie"
+	  SrcPort		  2
+	  DstBlock		  "I_Batt"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "U_set"
+	  SrcPort		  1
+	  DstBlock		  "Batterie"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Batterie"
+	  SrcPort		  1
+	  DstBlock		  "I_Batt_max_charge"
+	  DstPort		  1
+	}
+	Line {
+	  Labels		  [0, 0]
+	  SrcBlock		  "USlope_set"
+	  SrcPort		  1
+	  DstBlock		  "Batterie"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Load Current (A)"
+      Position		      [295, 505, 355, 535]
+      Orientation	      "up"
+      NamePlacement	      "alternate"
+      Value		      "5"
+      VectorParams1D	      on
+      Port {
+	PortNumber		1
+	Name			"current"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Load Current (A)1"
+      Position		      [774, 380, 856, 405]
+      Orientation	      "up"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [930, 324, 960, 356]
+      Floating		      off
+      Location		      [1, 56, 1025, 737]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1]
+      Position		      [805, 330, 825, 350]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      Position		      [720, 450, 740, 470]
+      NamePlacement	      "alternate"
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator1"
+      Position		      [720, 410, 740, 430]
+      NamePlacement	      "alternate"
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator2"
+      Position		      [720, 370, 740, 390]
+      NamePlacement	      "alternate"
+      ShowName		      off
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Load Current (A)1"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"ISEA_FFA Battery Model\nI > 0 = charging"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 55]
+	DstBlock		"ISEA_FFA Battery Model\nI > 0 = charging"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "ISEA_FFA Battery Model\nI > 0 = charging"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ISEA_FFA Battery Model\nI > 0 = charging"
+      SrcPort		      2
+      DstBlock		      "Terminator2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ISEA_FFA Battery Model\nI > 0 = charging"
+      SrcPort		      3
+      DstBlock		      "Terminator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ISEA_FFA Battery Model\nI > 0 = charging"
+      SrcPort		      4
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      Name		      "current"
+      Labels		      [2, 0]
+      SrcBlock		      "Load Current (A)"
+      SrcPort		      1
+      Points		      [0, -45]
+      DstBlock		      "ISEA_FFA Battery Model\nI > 0 = charging"
+      DstPort		      3
+    }
+  }
+}
